@@ -8,6 +8,9 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
+  html: {
+    cspNonce: 'ZWxlY3Ryb24tYXBwLXRlbXBsYXRl'
+  },
   plugins: [
     react()
   ]
