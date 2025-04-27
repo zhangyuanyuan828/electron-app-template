@@ -4,10 +4,19 @@ import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron'
 const api = {
   devTools: {
     toggleDevTools() {
-      ipcRenderer.emit('toggle-dev-tools')
+      ipcRenderer.send('toggle-dev-tools')
     }
   },
   window: {
+    minimize() {
+      ipcRenderer.send('window-minimize')
+    },
+    maximize() {
+      ipcRenderer.send('window-maximize')
+    },
+    close() {
+      ipcRenderer.send('window-close')
+    },
     getWindowState() {
       return ipcRenderer.invoke('get-window-state')
     },
