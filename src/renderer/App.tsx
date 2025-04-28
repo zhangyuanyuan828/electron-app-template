@@ -1,6 +1,7 @@
 import { useWindowEvent } from '@mantine/hooks'
 import { useEffect } from 'react'
 import './App.scss'
+import logo from './assets/logo.svg'
 import { api } from './preload'
 import { useWindowStateStore } from './stores'
 
@@ -26,7 +27,11 @@ export function App() {
   return (
     <div className="window">
       <div className="window-title-bar">
-        <div className="window-title"></div>
+        <div className="window-title">
+          <div className="window-logo">
+            <img src={logo} alt="logo" />
+          </div>
+        </div>
         <div className="window-menus"></div>
         <div className="window-controls">
           <button className="window-button window-minimize" onClick={api.window.minimize}>
