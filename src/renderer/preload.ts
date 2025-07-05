@@ -1,4 +1,4 @@
-import { Api } from '@/preload/preload'
+import type { Api } from '@/preload/preload'
 
 declare global {
   interface Window {

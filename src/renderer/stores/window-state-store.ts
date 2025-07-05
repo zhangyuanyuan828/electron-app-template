@@ -1,4 +1,4 @@
-import { WindowState } from '@/types'
+import type { WindowState } from '@/types'
 import { create } from 'zustand'
 
 export interface WindowStateStore extends WindowState {

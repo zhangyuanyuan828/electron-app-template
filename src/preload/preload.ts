@@ -1,5 +1,6 @@
-import { WindowState } from '@/types'
-import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron'
+import type { WindowState } from '@/types'
+import type { IpcRendererEvent } from 'electron'
+import { contextBridge, ipcRenderer } from 'electron'
 
 const api = {
   devTools: {
